@@ -29,3 +29,6 @@ This extension requires access to cookies from the sites you visit. This permiss
 ## Contributing
 
 Contributions are welcome! If you have suggestions for improvements or want to report a bug, please create an issue or submit a pull request.
+
+<img width="478" alt="image" src="https://github.com/user-attachments/assets/a2bc88b7-ecac-4908-8678-923ff2dca37a">
+
