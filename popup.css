@@ -1,0 +1,36 @@
+body {
+    color: white;
+    background-color: #e0e0e0;;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 10px;
+    border: 16px solid #601616;
+    border-style: ridge;
+}
+
+button {
+    background-color: #601616;
+    color: #FFF;
+    border: none;
+    border-radius: 5px;
+    margin-block-start: 5px;
+    padding: 5px 20px;;
+    font-size: 14px;
+    font-weight: bolder;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 8px solid #601616;
+    border-style: ridge;
+}
+
+button:hover {
+    background-color: #D19A9A;
+    transform: translateY(-1px);
+}
+
+button:active {
+    background-color: #8B3A3A;
+    transform: translateY(0);
+}

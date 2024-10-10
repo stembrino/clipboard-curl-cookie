@@ -2,12 +2,14 @@
 <html>
 <head>
   <title>Get Session Cookie</title>
-  <script src="popup.js"></script>
+  <link rel="stylesheet" type="text/css" href="popup.css">
 </head>
 <body>
-  <h1>Get Session Cookie</h1>
-  <div id="debug"></div>
-  <button id="copy-btn">Get Cookie</button>
-  <p id="cookieValue"></p>
+  <textarea id="cookie-textarea" class="hidden" rows="10" cols="50"></textarea>
+  <button id="copy-btn" type="button">CLIPBOARD</button>
 </body>
+<footer>
+  <div id="debug"></div>
+</footer>
+<script src="popup.js"></script>
 </html>

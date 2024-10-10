@@ -1,3 +1,4 @@
+
 /**
  * @param {string} text
  */
@@ -15,6 +16,13 @@ const chromeQueryConfig = {
     status: 'complete',
 }
 
+const showInTextarea = (text) => {
+    if(text.length === 0) {
+        document.getElementById('cookie-textarea').value = 'Empty cookies :(';
+        return;
+    }
+    document.getElementById('cookie-textarea').value = text;
+}
 
 /**
  * @param {Array<Object>} cookies
@@ -31,8 +39,8 @@ const tabHandler = (tab) => {
     chrome.cookies.getAll({ url: tab[0].url }, (cookies) => {
         const formattedCookies = formatCookie(cookies);
 
-        debug(formattedCookies)
-        copyToClipboard(JSON.stringify(formattedCookies))
+        showInTextarea(formattedCookies);
+        copyToClipboard(formattedCookies)
     });
 }
 
