@@ -8,7 +8,7 @@
 - **User-Friendly Interface**: A clean and intuitive design for effortless usage.
 - **Cross-Site Compatibility**: Works seamlessly on any website.
 
-- ## Installation
+## Installation
 
 1. Download the repository.
 2. Open Chrome and navigate to `chrome://extensions/`.
