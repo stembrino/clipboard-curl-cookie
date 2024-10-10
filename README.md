@@ -8,6 +8,13 @@
 - **User-Friendly Interface**: A clean and intuitive design for effortless usage.
 - **Cross-Site Compatibility**: Works seamlessly on any website.
 
+- ## Installation
+
+1. Download the repository.
+2. Open Chrome and navigate to `chrome://extensions/`.
+3. Enable **Developer mode** in the top right corner.
+4. Click on **Load unpacked** and select the extension's directory.
+
 ## How It Works
 
 1. Install the Cookie Clipboard extension from the Chrome Web Store.
@@ -18,15 +25,6 @@
 ## Host Permissions
 
 This extension requires access to cookies from the sites you visit. This permission is essential for its functionality, allowing you to copy cookie data directly to your clipboard. Rest assured, no personal data is collected or stored.
-
-## Installation
-
-To install the extension:
-
-1. Download the repository.
-2. Open Chrome and navigate to `chrome://extensions/`.
-3. Enable **Developer mode** in the top right corner.
-4. Click on **Load unpacked** and select the extension's directory.
 
 ## Contributing
 
