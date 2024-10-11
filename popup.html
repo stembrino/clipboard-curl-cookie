@@ -6,10 +6,16 @@
 </head>
 <body>
   <textarea id="cookie-textarea" class="hidden" rows="10" cols="50"></textarea>
-  <button id="copy-btn" type="button">CLIPBOARD</button>
+  <div class="option-panel">
+    <button id="copy-btn" type="button">CLIPBOARD</button>
+    <div class="option-panel__input-menu">
+      <label>set a key:</label>
+      <input id="cookie-key" class="retro-input" value="">
+    </div>
+  </div>
 </body>
 <footer>
-  <div id="debug"></div>
+  <!-- <button id="debug">DEBUG</button> -->
 </footer>
 <script src="popup.js"></script>
 </html>

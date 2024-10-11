@@ -8,6 +8,8 @@
 - **User-Friendly Interface**: A clean and intuitive design for effortless usage.
 - **Cross-Site Compatibility**: Works seamlessly on any website.
 
+### ➕ This is useful for quickly add cookie in header using Insomnia or Postman.
+
 ## Installation
 
 1. Download the repository.
@@ -33,4 +35,3 @@ Contributions are welcome! If you have suggestions for improvements or want to r
 ## 📷
 
 <img width="478" alt="image" src="https://github.com/user-attachments/assets/a2bc88b7-ecac-4908-8678-923ff2dca37a">
-

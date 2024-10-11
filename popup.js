@@ -1,10 +1,9 @@
+const cookieKey = document.getElementById("cookie-key");
 
-/**
- * @param {string} text
- */
+const hasCookieKey = () => cookieKey.value.length > 0;
+
 const copyToClipboard =(text) => {
     navigator.clipboard.writeText(text).then(function() {
-        console.log('Text copied to clipboard');
     }).catch(function(err) {
         console.error('Error: ', err);
     });
@@ -24,17 +23,17 @@ const showInTextarea = (text) => {
     document.getElementById('cookie-textarea').value = text;
 }
 
-/**
- * @param {Array<Object>} cookies
- * @returns {Array<string>}
- */
+const formatAsKeyValue = (cookies) => {
+    const cookie = JSON.stringify(cookies.map(cookie => `${cookie.name}=${cookie.value}`).join('; '));
+    return `"${cookieKey.value}": ${cookie}`
+}
+
 const formatCookie = (cookies) => {
+    if(hasCookieKey())
+        return formatAsKeyValue(cookies);
     return cookies.map(cookie => `${cookie.name}=${cookie.value}`).join('; ')
 }
 
-/**
- * @param {Array<{url: string}>} tab
- */
 const tabHandler = (tab) => {
     chrome.cookies.getAll({ url: tab[0].url }, (cookies) => {
         const formattedCookies = formatCookie(cookies);
@@ -44,19 +43,26 @@ const tabHandler = (tab) => {
     });
 }
 
-const onCopyButtonClick = () => {
+const persistCookieKey = async () => {
+    await chrome.storage.local.set({ cookieKey: cookieKey.value });
+}
+
+const onClipBtnClick = () => {
+    persistCookieKey()
     chrome.tabs.query(chromeQueryConfig, tabHandler);
 };
+
+const setCookieKeyFromChromeStore = async () => {
+    if(hasCookieKey()) return;
+
+    const cookieKeyStorage = (await chrome.storage.local.get('cookieKey'))?.cookieKey;
+    cookieKey.value = cookieKeyStorage;
+}
 
 window.addEventListener('load', () => {
     document
         .getElementById('copy-btn')
-        .addEventListener('click', onCopyButtonClick);
-});
+        .addEventListener('click', onClipBtnClick);
 
-/**
- * only to debug propose
- */
-function debug(text) {
-    document.getElementById('debug').innerHTML = JSON.stringify(text);
-}
+    setCookieKeyFromChromeStore();
+});
