@@ -31,26 +31,13 @@ const formatCookie = (cookies) => {
     return cookies.map(cookie => `${cookie.name}=${cookie.value}`).join('; ');
 }
 
-const tabHandler = (tab) => {
-    chrome.cookies.getAll({ url: tab[0].url }, (cookies) => {
-        const formattedCookies = formatCookie(cookies);
-
-        showInTextarea(formattedCookies);
-        copyToClipboard(formattedCookies);
-    });
-}
-
-const persistCookieKey = async () => {
+const handleClipClick = async () => {
     chromeStorage.set({key: keys.COOKIE_KEY, value: cookieKeyInputEl.value});
-}
-
-const handleClipClick = () => {
-    persistCookieKey()
-    chrome.tabs.query({
-        active: true,
-        currentWindow: true,
-        status: 'complete',
-    }, tabHandler);
+    const cookies = await chromeStorage.cookies();
+    const formattedCookies = formatCookie(cookies);
+    
+    showInTextarea(formattedCookies);
+    copyToClipboard(formattedCookies);
 };
 
 export { handleClipClick };
