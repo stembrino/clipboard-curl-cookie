@@ -1,4 +1,4 @@
-import { chromeStorage, keys } from "./util/cookieStorage.js";
+import { chromeStorage, keys } from "./util/chromeStorage.js";
 
 const _states = {
     cookieKey: "",

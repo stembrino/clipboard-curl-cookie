@@ -1,4 +1,4 @@
-import { chromeStorage, keys } from "../util/cookieStorage.js";
+import { chromeStorage, keys } from "../util/chromeStorage.js";
 import { selector } from "../util/domSelector.js";
 
 const cookieKeyInputEl = document.getElementById("cookie-key");
