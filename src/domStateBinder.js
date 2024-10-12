@@ -1,11 +1,11 @@
 /**
  * @file Binds app state from Chrome storage to HTML elements.
  */
-import { storage } from "./storageStates.js";
+import { states } from "./storageStates.js";
 import { selector } from "./util/domSelector.js";
 
 const bindCookieKeyToInput = () => {
-    const cookieKey = storage.getCookieKey();
+    const cookieKey = states.getCookieKey();
     if(!cookieKey) return;
 
     selector.cookieKeyEl.value = cookieKey;

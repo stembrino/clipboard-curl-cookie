@@ -1,3 +1,4 @@
+import { states } from "../storageStates.js";
 import { chromeStorage, keys } from "../util/chromeStorage.js";
 import { selector } from "../util/domSelector.js";
 
@@ -33,7 +34,7 @@ const formatCookie = (cookies) => {
 
 const handleClipClick = async () => {
     chromeStorage.set({key: keys.COOKIE_KEY, value: cookieKeyInputEl.value});
-    const cookies = await chromeStorage.cookies();
+    const cookies = states.getCookie();
     const formattedCookies = formatCookie(cookies);
     
     showInTextarea(formattedCookies);
