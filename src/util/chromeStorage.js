@@ -1,5 +1,5 @@
 /**
- * @file Provides functions to get and set the cookie key in Chrome's local storage.
+ * @file Provides functions to wrap Chrome's (chrome) memory features.
  */
 
 export const keys = {
