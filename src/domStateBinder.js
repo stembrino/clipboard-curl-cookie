@@ -5,12 +5,12 @@ import { states } from "./storageStates.js";
 import { selector } from "./util/domSelector.js";
 
 const bindCookieKeyToInput = () => {
-    const cookieKey = states.getCookieKey();
-    if(!cookieKey) return;
+  const cookieKey = states.getCookieKey();
+  if (!cookieKey) return;
 
-    selector.cookieKeyEl.value = cookieKey;
-}
+  selector.cookieKeyEl.value = cookieKey;
+};
 
 export const initDomStateBinding = () => {
-    bindCookieKeyToInput();
+  bindCookieKeyToInput();
 };

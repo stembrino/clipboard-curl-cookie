@@ -6,15 +6,14 @@ import { handleKeyBlurAction } from "./actionController/handleKeyBlurAction.js";
 import { selector } from "./util/domSelector.js";
 
 const clipBtnListener = () => {
-    selector.clipBtnEl.addEventListener("click", handleClipClick);
-}
+  selector.clipBtnEl.addEventListener("click", handleClipClick);
+};
 
 const inputKeyBlurListener = () => {
-    selector.inputKey.addEventListener("blur", handleKeyBlurAction)
-}
+  selector.inputKey.addEventListener("blur", handleKeyBlurAction);
+};
 
 export const initListeners = () => {
-    clipBtnListener();
-    inputKeyBlurListener();
-}
-
+  clipBtnListener();
+  inputKeyBlurListener();
+};
