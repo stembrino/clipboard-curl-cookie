@@ -13,30 +13,34 @@ body {
 }
 
 button {
-    background-color: #601616;
-    color: #FFF;
     border: none;
+    background-color: #e0e0e0;
+    color: #FFF;
     border-radius: 5px;
-    margin-block-start: 5px;
-    padding: 5px 20px;
+    margin-block: 5px;
+    margin-inline-start: 5px;
     font-size: 14px;
     font-weight: bolder;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border: 8px solid #601616;
-    border-style: ridge;
 }
 
 button:hover {
-    background-color: #D19A9A;
+    background-color: #dcdcdc;
     transform: translateY(-1px);
 }
 
 button:active {
-    background-color: #8B3A3A;
+    background-color: #cea2a2;
     transform: translateY(0);
+}
+
+button#copy-btn {
+    background-image: url(../images/copy-regular.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 18px;
 }
 
 .option-panel {
