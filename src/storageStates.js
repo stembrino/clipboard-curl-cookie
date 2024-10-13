@@ -14,9 +14,13 @@ const updateCookieKey = (value) => {
     _states.cookieKey = value;
 }
 
+const adaptCookieFormat = (cookie) => {
+    return cookie.map(cookie => `${cookie.name}=${cookie.value}`).join('; ');
+}
+
 const loadStates = async () => {
     _states.cookieKey = (await chromeStorage.get(keys.COOKIE_KEY))?.cookieKey;
-    _states.cookie = await chromeStorage.cookies();
+    _states.cookie = adaptCookieFormat(await chromeStorage.cookies());
 }
 
 export const states = {

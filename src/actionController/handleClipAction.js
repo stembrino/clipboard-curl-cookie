@@ -18,14 +18,14 @@ const showInTextarea = (text) => {
 }
 
 const formatAsKeyValue = () => {
-    const cookie = JSON.stringify(states.getCookies().map(cookie => `${cookie.name}=${cookie.value}`).join('; '));
-    return `"${selector.inputKey.value}": ${cookie}`
+    const cookie = JSON.stringify(states.getCookies());
+    return `"${selector.inputKey.value}": ${cookie}`;
 }
 
 const formatCookie = () => {
     if(states.getCookieKey())
         return formatAsKeyValue();
-    return states.getCookies().map(cookie => `${cookie.name}=${cookie.value}`).join('; ');
+    return states.getCookies();
 }
 
 const handleClipClick = async () => {
