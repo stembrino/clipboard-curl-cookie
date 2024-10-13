@@ -6,4 +6,5 @@ export const selector = {
     cookieKeyEl: document.getElementById("cookie-key"),
     clipBtnEl: document.getElementById("copy-btn"),
     cookieTextareaEl: document.getElementById('cookie-textarea'),
+    inputKey: document.getElementById("cookie-key"),
 } 

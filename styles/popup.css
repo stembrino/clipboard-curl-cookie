@@ -18,7 +18,7 @@ button {
     border: none;
     border-radius: 5px;
     margin-block-start: 5px;
-    padding: 5px 20px;;
+    padding: 5px 20px;
     font-size: 14px;
     font-weight: bolder;
     font-weight: bold;
@@ -41,8 +41,9 @@ button:active {
 
 .option-panel {
     display: flex;
-    gap: 16px;
+    gap: 18px;
     align-items: center;
+    justify-content: space-between;
 }
 
 .retro-input {
@@ -67,8 +68,8 @@ button:active {
 
 .option-panel__input-menu {
     display: flex;
-    align-items: center;
     gap: 2px;
+    align-items: center;
 }
 
 .option-panel__input-menu label {
@@ -76,4 +77,13 @@ button:active {
     font-family: 'Source Code Pro', 'Courier New', Courier, monospace;
     word-spacing: -4px;
     font-weight: bolder;
+}
+
+.separator {
+    height: 5px;
+    width: 100%;
+    background: #d1d1d1;
+    box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 1px;
+    margin-block: 12px;
 }

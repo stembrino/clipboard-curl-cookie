@@ -7,7 +7,12 @@ const _states = {
 
 const getCookieKey = () => _states.cookieKey;
 
-const getCookie = () => _states.cookie;
+const getCookies = () => _states.cookie;
+
+const updateCookieKey = (value) => {
+    chromeStorage.set({key: keys.COOKIE_KEY, value});
+    _states.cookieKey = value;
+}
 
 const loadStates = async () => {
     _states.cookieKey = (await chromeStorage.get(keys.COOKIE_KEY))?.cookieKey;
@@ -16,6 +21,7 @@ const loadStates = async () => {
 
 export const states = {
     getCookieKey,
-    getCookie,
-    loadStates
+    getCookies,
+    loadStates,
+    updateCookieKey,
 }
