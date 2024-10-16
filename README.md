@@ -34,4 +34,5 @@ Contributions are welcome! If you have suggestions for improvements or want to r
 
 ## 📷
 
-<img width="478" alt="image" src="https://github.com/user-attachments/assets/b5e6db16-18fc-4355-96a1-f1cc7dc0c798">
+<img width="465" alt="image" src="https://github.com/user-attachments/assets/784ad64f-f59e-48c9-bb84-aa6b1153a2c6">
+
