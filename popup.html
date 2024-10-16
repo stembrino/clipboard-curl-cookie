@@ -3,15 +3,21 @@
 <head>
   <title>Get Session Cookie</title>
   <link rel="stylesheet" type="text/css" href="./styles/popup.css">
+  <link rel="stylesheet" type="text/css" href="./styles/misc.css">
 </head>
 <body>
-  <textarea id="cookie-textarea" class="hidden" rows="10" cols="50"></textarea>
+  <textarea id="cookie-textarea" rows="10" cols="50"></textarea>
   <div class="option-panel">
     <button id="copy-btn" type="button" aria-label="copy clipboard" title="copy clipboard"></button>
     <div class="option-panel__input-menu">
       <label title="insert a key to be copied in key-value format">set a key:</label>
       <input id="cookie-key" class="retro-input" value="">
+      <button id="btn-open-key-list" type="button" class="input-menu__open-list"></button>
+      <button id="cookie-key-add" class="input-menu-button" type="button" aria-label="save key" title="save the key to the list"></button>
     </div>
+  </div>
+  <div id="wrapper-key-list" class="wrapper-cooke-key-list-panel hidden">
+    <div id="cooke-key-list" class="cooke-key-list-panel"></div>
   </div>
 </body>
 <script type="module" src="./src/main.js"></script>

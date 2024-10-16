@@ -1,8 +1,8 @@
-import { states } from "../storageStates.js";
+import { cookieState } from "../states/cookie.js";
 
 export const handleKeyBlurAction = (event) => {
   const { value } = event.target;
-  if (value === states.getCookieKey()) return;
+  if (value === cookieState.getCookieKey()) return;
 
-  states.updateCookieKey(value);
+  cookieState.updateCookieKey(value);
 };

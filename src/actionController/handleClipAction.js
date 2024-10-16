@@ -1,4 +1,4 @@
-import { states } from "../storageStates.js";
+import { cookieState } from "../states/cookie.js";
 import { selector } from "../util/domSelector.js";
 
 const copyToClipboard = async (text) => {
@@ -18,17 +18,17 @@ const showInTextarea = (text) => {
 };
 
 const formatAsKeyValue = () => {
-  const cookie = JSON.stringify(states.getCookies());
-  return `"${selector.inputKey.value}": ${cookie}`;
+  const cookie = JSON.stringify(cookieState.getCookies());
+  return `"${selector.inputKeyEl.value}": ${cookie}`;
 };
 
 const formatCookie = () => {
-  if (states.getCookieKey()) return formatAsKeyValue();
-  return states.getCookies();
+  if (cookieState.getCookieKey()) return formatAsKeyValue();
+  return cookieState.getCookies();
 };
 
 const handleClipClick = async () => {
-  const cookies = states.getCookies();
+  const cookies = cookieState.getCookies();
   const formattedCookies = formatCookie(cookies);
 
   showInTextarea(formattedCookies);

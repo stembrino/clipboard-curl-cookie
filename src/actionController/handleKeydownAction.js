@@ -1,10 +1,10 @@
-import { states } from "../storageStates.js";
+import { cookieState } from "../states/cookie.js";
 import { handleClipClick } from "./handleClipAction.js";
 
 export const handleKeydown = (event) => {
   if (event.key === "Enter") {
     event.preventDefault();
-    states.updateCookieKey(event.target.value);
+    cookieState.updateCookieKey(event.target.value);
     handleClipClick();
   }
 };

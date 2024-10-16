@@ -4,6 +4,7 @@ html {
 }
 
 body {
+    position: relative;
     color: white;
     background-color: #e0e0e0;
     margin: 0;
@@ -16,8 +17,6 @@ button {
     border: none;
     background-color: inherit;
     color: #FFF;
-    border-radius: 5px;
-    margin-block: 5px;
     margin-inline-start: 5px;
     font-size: 14px;
     font-weight: bolder;
@@ -26,13 +25,12 @@ button {
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-button:hover {
+button#copy-btn:hover {
     transform: translateY(-1px);
 }
 
-button:active {
+button#copy-btn:active {
     background-color: #ff4400;
-    transform: translateY(0);
 }
 
 button#copy-btn {
@@ -40,6 +38,8 @@ button#copy-btn {
     background-size: contain;
     background-repeat: no-repeat;
     padding: 18px;
+    border-radius: 5px;
+    margin-block: 5px;
 }
 
 .option-panel {
@@ -54,7 +54,7 @@ button#copy-btn {
     color: #333;
     padding-inline: 2px;
     padding-block: 0px;
-    width: 68px;
+    width: 80px;
     outline: none;
     transition: all 0.3s ease;
     border: none;
@@ -87,4 +87,64 @@ button#copy-btn {
     box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.3);
     border-radius: 1px;
     margin-block: 12px;
+}
+
+button.input-menu-button {
+    background-image: url(../images/floppy-disk-solid.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 10px;
+}
+
+button.input-menu__open-list {
+    background-image: url(../images/list-solid.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 10px;
+}
+
+.wrapper-cooke-key-list-panel {
+    position: fixed;
+    inset: 0;
+}
+
+.cooke-key-list-panel {
+    width: 40%;
+    outline: 1px solid black;
+    background-color: #e0e0e0;
+    border: 6px solid #e0e0e0;
+    border-style: ridge;
+    padding: 12px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-inline: auto 24px;
+    margin-block-start: 24px;
+}
+
+button.cooke-key-list-panel__item {
+    position: relative;
+    display: inline-block;
+    background-color: inherit;
+    border: 4px solid #e0e0e0;
+    border-style: ridge;
+    border-radius: 1px;
+    color: black;
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    text-align: center;
+    box-shadow: 1px 1px 0px #000;
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+button.cooke-key-list-panel__item:hover {
+    background-color: #d4d4d4;
+    /* box-shadow: 2px 2px 0px #000; */
+}
+
+button.cooke-key-list-panel__item:active {
+    background-color: #c0c0c0;
+    box-shadow: 0px 0px 0px #000;
 }

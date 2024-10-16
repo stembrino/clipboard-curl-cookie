@@ -1,9 +1,7 @@
-import { states } from "./storageStates.js";
+import { loadInitialStates } from "./states/index.js";
 import { initListeners } from "./eventListener.js";
-import { initDomStateBinding } from "./domStateBinder.js";
 
 window.addEventListener("load", async () => {
-  await states.loadStates();
+  loadInitialStates();
   initListeners();
-  initDomStateBinding();
 });

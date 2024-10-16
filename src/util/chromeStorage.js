@@ -4,6 +4,7 @@
 
 export const keys = {
   COOKIE_KEY: "cookieKey",
+  COOKIE_KEY_LIST: "cookieKeyList",
 };
 
 /**
