@@ -24,7 +24,7 @@ const getCookieKeyList = () => _state.cookieKeyList;
 /**
  * @param {string} cookieKey
  */
-const addCookieKeyList = (cookieKey) => {
+const addCookieKeyList = async (cookieKey) => {
   if (!cookieKey) return;
 
   const sanitizedKey = genSanitizedKey(cookieKey);
@@ -37,11 +37,19 @@ const addCookieKeyList = (cookieKey) => {
       value: cookieKey.trim(),
     },
   ];
-  chromeStorage.set({ key: keys.COOKIE_KEY_LIST, value: _state.cookieKeyList });
+  await chromeStorage.set({
+    key: keys.COOKIE_KEY_LIST,
+    value: _state.cookieKeyList,
+  });
+  dispatchDomUpdate();
 };
 
-const deleteCookieKeyList = (cookieKey) => {
-  return _state.cookieKeyList.delete(cookieKey);
+const deleteCookieKeyList = (keyToDelete) => {
+  _state.cookieKeyList = _state.cookieKeyList.filter(
+    ({ key }) => key !== keyToDelete,
+  );
+  chromeStorage.set({ key: keys.COOKIE_KEY_LIST, value: _state.cookieKeyList });
+  dispatchDomUpdate();
 };
 
 const hasItem = (key) => {
