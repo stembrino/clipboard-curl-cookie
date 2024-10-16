@@ -8,7 +8,7 @@
 - **User-Friendly Interface**: A clean and intuitive design for effortless usage.
 - **Cross-Site Compatibility**: Works seamlessly on any website.
 
-### ➕ This is useful for quickly add cookie in header using Insomnia or Postman.
+> **🤝 This is useful for quickly adding cookies in the header using Insomnia or Postman. 🤌**
 
 ## Installation
 
@@ -30,7 +30,7 @@ This extension requires access to cookies from the sites you visit. This permiss
 
 ## Contributing
 
-Contributions are welcome! If you have suggestions for improvements or want to report a bug, please create an [issue](https://github.com/stembrino/clipboard-curl-cookie/issues) or submit a pull request.
+Contributions are welcome! If you have suggestions for improvement or want to report a bug, please create an [issue](https://github.com/stembrino/clipboard-curl-cookie/issues) or submit a pull request.
 
 ## 📷
 
