@@ -21,6 +21,8 @@ const adaptCookieFormat = (cookie) => {
 };
 
 const bindCookieKeyToInput = () => {
+  if (_states.cookieKey === undefined) return;
+
   selector.cookieKeyEl.value = _states.cookieKey;
 };
 
