@@ -38,15 +38,14 @@ button#copy-btn {
     background-repeat: no-repeat;
     padding: 18px;
     border-radius: 5px;
-    margin-block: 5px;
+    margin-block-start: 5px;
     margin-inline-start: 5px;
 }
 
 .option-panel {
     display: flex;
-    gap: 18px;
-    align-items: center;
-    justify-content: space-between;
+    gap: 4px;
+    flex-direction: column;
 }
 
 input.retro-input {
@@ -70,8 +69,8 @@ input.retro-input:focus {
 
 .option-panel__input-menu {
     display: flex;
-    gap: 2px;
     align-items: center;
+    justify-content: flex-end;
 }
 
 .option-panel__input-menu label {
@@ -79,15 +78,6 @@ input.retro-input:focus {
     font-family: 'Source Code Pro', 'Courier New', Courier, monospace;
     word-spacing: -4px;
     font-weight: bolder;
-}
-
-.separator {
-    height: 5px;
-    width: 100%;
-    background: #d1d1d1;
-    box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.3);
-    border-radius: 1px;
-    margin-block: 12px;
 }
 
 button.input-menu-button {
@@ -159,4 +149,10 @@ button.cookie-key-list-panel__item:active {
 .wrapper-key-list-panel {
     display: flex;
     gap: 16px;
+}
+
+.clipboard-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

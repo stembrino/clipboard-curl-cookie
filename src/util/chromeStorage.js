@@ -32,7 +32,7 @@ const getCurrentTab = async () => {
   });
 };
 
-export const getAllCookies = async () => {
+const getAllCookies = async () => {
   const currentTab = await getCurrentTab();
 
   return new Promise((resolve, reject) => {
@@ -45,8 +45,17 @@ export const getAllCookies = async () => {
   });
 };
 
+const createTab = (url) => {
+  if (!url) throw Error("url is not defined");
+
+  chrome.tabs.create({
+    url,
+  });
+};
+
 export const chromeStorage = {
   get: getChromeStorage,
   set: setChromeStorage,
   cookies: getAllCookies,
+  createTab,
 };

@@ -18,6 +18,7 @@ export const selector = {
   wrapperKeyList: document.getElementById("wrapper-key-list"),
   btnOpenKeyListEl: document.getElementById("btn-open-key-list"),
   allCookieKeysItem: document.querySelectorAll("cookie-key-item"),
+  infoBtn: document.getElementById("info-btn"),
 };
 
 export const creatorEl = {

@@ -5,6 +5,7 @@ import { handleClipClick } from "./actionController/handleClipAction.js";
 import { handleCookieKeyAdd } from "./actionController/handleCookieKeyAddAction.js";
 import { handleKeyBlurAction } from "./actionController/handleKeyBlurAction.js";
 import { handleKeydown } from "./actionController/handleKeydownAction.js";
+import { chromeStorage } from "./util/chromeStorage.js";
 import { selector } from "./util/domSelector.js";
 
 const clipBtnListener = () => {
@@ -41,6 +42,14 @@ const clickKeyListListener = () => {
   });
 };
 
+const infoBtnListener = () => {
+  selector.infoBtn.addEventListener("click", () => {
+    chromeStorage.createTab(
+      "https://stembrino.github.io/clipboard-curl-cookie-info-page/",
+    );
+  });
+};
+
 export const initListeners = () => {
   clipBtnListener();
   inputKeyBlurListener();
@@ -49,4 +58,5 @@ export const initListeners = () => {
   btnOpenKeyListAddListener();
   clickWrapperKeyListListener();
   clickKeyListListener();
+  infoBtnListener();
 };
