@@ -1,7 +1,6 @@
 /**
  * @file This file initializes and starts event listeners for the application.
  */
-import { handleClickKeyList } from "./actionController/handleClickKeyListAction.js";
 import { handleClipClick } from "./actionController/handleClipAction.js";
 import { handleCookieKeyAdd } from "./actionController/handleCookieKeyAddAction.js";
 import { handleKeyBlurAction } from "./actionController/handleKeyBlurAction.js";
@@ -39,7 +38,6 @@ const clickWrapperKeyListListener = () => {
 const clickKeyListListener = () => {
   selector.cookieKeyListEl.addEventListener("click", (event) => {
     event.stopPropagation();
-    handleClickKeyList(event);
   });
 };
 

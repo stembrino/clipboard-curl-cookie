@@ -17,7 +17,6 @@ button {
     border: none;
     background-color: inherit;
     color: #FFF;
-    margin-inline-start: 5px;
     font-size: 14px;
     font-weight: bolder;
     font-weight: bold;
@@ -40,6 +39,7 @@ button#copy-btn {
     padding: 18px;
     border-radius: 5px;
     margin-block: 5px;
+    margin-inline-start: 5px;
 }
 
 .option-panel {
@@ -110,17 +110,18 @@ button.input-menu__open-list {
 }
 
 .cooke-key-list-panel {
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 8px;
     width: 40%;
     max-height: 128px;
     outline: 1px solid black;
     background-color: #e0e0e0;
     border: 6px solid #e0e0e0;
     border-style: ridge;
-    padding: 12px;
+    padding-block: 12px;
+    padding-inline-start: 12px;
     overflow: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
     margin-inline: auto 24px;
     margin-block-start: 24px;
 }
@@ -141,12 +142,21 @@ button.cooke-key-list-panel__item {
     transition: background-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-button.cooke-key-list-panel__item:hover {
+button.cookie-key-list-panel__item:hover {
     background-color: #d4d4d4;
     /* box-shadow: 2px 2px 0px #000; */
 }
 
-button.cooke-key-list-panel__item:active {
+button.cookie-key-list-panel__item:active {
     background-color: #c0c0c0;
     box-shadow: 0px 0px 0px #000;
+}
+
+.cookie-delete-key-item {
+    color: #601616;
+}
+
+.wrapper-key-list-panel {
+    display: flex;
+    gap: 16px;
 }

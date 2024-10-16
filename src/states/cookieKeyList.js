@@ -49,7 +49,6 @@ const deleteCookieKeyList = (keyToDelete) => {
     ({ key }) => key !== keyToDelete,
   );
   chromeStorage.set({ key: keys.COOKIE_KEY_LIST, value: _state.cookieKeyList });
-  dispatchDomUpdate();
 };
 
 const hasItem = (key) => {
@@ -59,10 +58,13 @@ const hasItem = (key) => {
 export const dispatchDomUpdate = () => {
   _state.cookieKeyList?.forEach(({ key, value }) => {
     if (!hasItem(key)) {
-      const item = creatorEl.cookieKeyLi();
-      item.textContent = value;
-      item.setAttribute("data-key", key);
-      selector.cookieKeyListEl.appendChild(item);
+      const itemBtn = creatorEl.cookieKeyLi();
+      itemBtn.textContent = value;
+      itemBtn.setAttribute("data-key", key);
+      selector.cookieKeyListEl.appendChild(itemBtn);
+      const itemBtnDelete = creatorEl.cookieKeyDeleteBtn();
+      itemBtnDelete.setAttribute("data-key", key);
+      selector.cookieKeyListEl.appendChild(itemBtnDelete);
     }
   });
 };
