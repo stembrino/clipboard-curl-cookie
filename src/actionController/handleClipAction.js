@@ -41,7 +41,7 @@ const clipFeedbackBtn = () => {
   clipFeedbackBtnTimeout = setTimeout(() => {
     clipFeedbackBtnTimeout = null;
     selector.clipBtnEl.textContent = btnClipInitText;
-  }, 800);
+  }, 1200);
 };
 
 const handleClipClick = async () => {
