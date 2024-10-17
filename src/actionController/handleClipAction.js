@@ -1,12 +1,17 @@
 import { cookieState } from "../states/cookie.js";
 import { selector } from "../util/domSelector.js";
 
+const btnClipInitText = selector.clipBtnEl.textContent;
+let clipFeedbackBtnTimeout = null;
+
 const copyToClipboard = async (text) => {
   try {
     await navigator.clipboard.writeText(text);
   } catch (err) {
     console.error("Error: ", err);
+    return false;
   }
+  return true;
 };
 
 const showInTextarea = (text) => {
@@ -27,12 +32,25 @@ const formatCookie = () => {
   return cookieState.getCookies();
 };
 
+const clipFeedbackBtn = () => {
+  if (clipFeedbackBtnTimeout) {
+    clearTimeout(clipFeedbackBtnTimeout);
+  }
+
+  selector.clipBtnEl.textContent = "COPIED";
+  clipFeedbackBtnTimeout = setTimeout(() => {
+    clipFeedbackBtnTimeout = null;
+    selector.clipBtnEl.textContent = btnClipInitText;
+  }, 800);
+};
+
 const handleClipClick = async () => {
   const cookies = cookieState.getCookies();
   const formattedCookies = formatCookie(cookies);
 
   showInTextarea(formattedCookies);
-  copyToClipboard(formattedCookies);
+  const hasSuccessCopied = copyToClipboard(formattedCookies);
+  hasSuccessCopied && clipFeedbackBtn();
 };
 
 export { handleClipClick };

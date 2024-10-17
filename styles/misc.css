@@ -12,6 +12,49 @@
 }
 
 .info-btn {
-    font-size: 20px;
+    font-size: 16px;
     color: #b42929;
+    margin-right: auto;
 }
+
+.btn-animation-icon {
+    transition: transform 0.1s;
+}
+
+.btn-animation-icon:hover {
+    box-shadow: 1px 1px 0px #999999;
+}
+
+.btn-animation-icon:active {
+    box-shadow: none;
+    transform: translate(0px, 0px);
+}
+
+button.space-btn {
+    text-align: center;
+    width: 240px;
+    border: 5px solid #e0e0e0;
+    border-style: ridge;
+    background-color: inherit;
+    border-radius: 2px;
+    padding: 3px 36px;
+    margin: auto;
+    font-size: 14px;
+    color: #333333;
+    transition: transform 0.1s;
+    background-image: url(../images/copy-regular.svg);
+    background-repeat: no-repeat;
+    background-size: 17px;
+    background-position-y: center;
+    background-position-x: 8px;
+}
+
+button.space-btn:hover {
+    box-shadow: 1px 1px 0px #999999;
+}
+  
+button.space-btn:active {
+    box-shadow: none;
+    transform: translate(0px, 0px);
+}
+  
