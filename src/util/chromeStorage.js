@@ -53,9 +53,20 @@ const createTab = (url) => {
   });
 };
 
+const copyToClipboard = async (text) => {
+  try {
+    await navigator.clipboard.writeText(text);
+  } catch (err) {
+    console.error("Error: ", err);
+    return false;
+  }
+  return true;
+};
+
 export const chromeStorage = {
   get: getChromeStorage,
   set: setChromeStorage,
   cookies: getAllCookies,
   createTab,
+  copyToClipboard,
 };
