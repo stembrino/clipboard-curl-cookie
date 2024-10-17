@@ -1,5 +1,5 @@
 import { cookieState } from "../states/cookie.js";
-import { selector } from "../util/domSelector.js";
+import { selector } from "../domManipulation/domSelector.js";
 
 const btnClipInitText = selector.clipBtnEl.textContent;
 let clipFeedbackBtnTimeout = null;

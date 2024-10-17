@@ -1,12 +1,12 @@
 /**
  * @file This file initializes and starts event listeners for the application.
  */
-import { handleClipClick } from "./actionController/handleClipAction.js";
-import { handleCookieKeyAdd } from "./actionController/handleCookieKeyAddAction.js";
-import { handleKeyBlurAction } from "./actionController/handleKeyBlurAction.js";
-import { handleKeydown } from "./actionController/handleKeydownAction.js";
-import { chromeStorage } from "./util/chromeStorage.js";
-import { selector } from "./util/domSelector.js";
+import { handleClipClick } from "../actionController/handleClipAction.js";
+import { handleCookieKeyAdd } from "../actionController/handleCookieKeyAddAction.js";
+import { handleKeyBlurAction } from "../actionController/handleKeyBlurAction.js";
+import { handleKeydown } from "../actionController/handleKeydownAction.js";
+import { chromeStorage } from "../util/chromeStorage.js";
+import { selector } from "./domSelector.js";
 
 const clipBtnListener = () => {
   selector.clipBtnEl.addEventListener("click", handleClipClick);

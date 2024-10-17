@@ -1,5 +1,6 @@
 import { chromeStorage, keys } from "../util/chromeStorage.js";
-import { creatorEl, selector } from "../util/domSelector.js";
+import { creatorEl } from "../domManipulation/domCreator.js";
+import { selector } from "../domManipulation/domSelector.js";
 
 /**
  * @typedef {{key: string, value: string}} Cookie

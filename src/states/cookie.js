@@ -1,5 +1,5 @@
 import { chromeStorage, keys } from "../util/chromeStorage.js";
-import { selector } from "../util/domSelector.js";
+import { selector } from "../domManipulation/domSelector.js";
 
 const _states = {
   cookieKey: "",

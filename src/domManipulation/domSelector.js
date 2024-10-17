@@ -20,19 +20,3 @@ export const selector = {
   allCookieKeysItem: document.querySelectorAll("cookie-key-item"),
   infoBtn: document.getElementById("info-btn"),
 };
-
-export const creatorEl = {
-  cookieKeyLi: () => {
-    const el = document.createElement("button");
-    el.classList.add("cooke-key-list-panel__item", "cookie-key-item");
-    el.addEventListener("click", handleClickKeyList);
-    return el;
-  },
-  cookieKeyDeleteBtn: () => {
-    const el = document.createElement("button");
-    el.classList.add("cookie-delete-key-item");
-    el.innerHTML = "&#10006;";
-    el.addEventListener("click", handleClickKeyListDelete);
-    return el;
-  },
-};
