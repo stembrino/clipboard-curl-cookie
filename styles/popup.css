@@ -63,20 +63,6 @@ input.retro-input:focus {
     font-weight: bolder;
 }
 
-button.input-menu-button {
-    background-image: url(../images/floppy-disk-solid.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    padding: 10px;
-}
-
-button.input-menu__open-list {
-    background-image: url(../images/list-solid.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    padding: 10px;
-}
-
 .wrapper-cooke-key-list-panel {
     position: fixed;
     inset: 0;

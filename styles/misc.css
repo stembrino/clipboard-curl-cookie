@@ -8,7 +8,13 @@
     background: #d1d1d1;
     box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.3);
     border-radius: 1px;
-    margin-block: 5px;
+    margin-block: 1px;
+}
+
+.icon-btn {
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 10px;
 }
 
 .info-btn {
@@ -28,6 +34,14 @@
 .btn-animation-icon:active {
     box-shadow: none;
     transform: translate(0px, 0px);
+}
+
+button.menu-button {
+    background-image: url(../images/floppy-disk-solid.svg);
+}
+
+button.open-list {
+    background-image: url(../images/list-solid.svg);
 }
 
 button.space-btn {

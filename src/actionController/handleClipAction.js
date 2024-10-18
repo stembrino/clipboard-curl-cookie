@@ -1,5 +1,6 @@
 import { cookieState } from "../states/cookie.js";
 import { selector } from "../domManipulation/domSelector.js";
+import { cookieAdapter } from "../adapter/cookieFormatAdapter.js";
 
 const btnClipInitText = selector.clipBtnEl.textContent;
 let clipFeedbackBtnTimeout = null;
@@ -22,13 +23,9 @@ const showInTextarea = (text) => {
   selector.cookieTextareaEl.value = text;
 };
 
-const formatAsKeyValue = () => {
-  const cookie = JSON.stringify(cookieState.getCookies());
-  return `"${selector.inputKeyEl.value}": ${cookie}`;
-};
-
 const formatCookie = () => {
-  if (cookieState.getCookieKey()) return formatAsKeyValue();
+  if (cookieState.getCookieKey())
+    return cookieAdapter.formatKeyValue(cookieState.getCookies());
   return cookieState.getCookies();
 };
 

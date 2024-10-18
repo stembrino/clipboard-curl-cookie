@@ -1,5 +1,6 @@
 import { chromeStorage, keys } from "../util/chromeStorage.js";
 import { selector } from "../domManipulation/domSelector.js";
+import { cookieAdapter } from "../adapter/cookieFormatAdapter.js";
 
 const _states = {
   cookieKey: "",
@@ -16,10 +17,6 @@ const updateCookieKey = (value) => {
   bindCookieKeyToInput();
 };
 
-const adaptCookieFormat = (cookie) => {
-  return cookie.map((cookie) => `${cookie.name}=${cookie.value}`).join("; ");
-};
-
 const bindCookieKeyToInput = () => {
   if (_states.cookieKey === undefined) return;
 
@@ -28,7 +25,7 @@ const bindCookieKeyToInput = () => {
 
 const loadStates = async () => {
   _states.cookieKey = (await chromeStorage.get(keys.COOKIE_KEY))?.cookieKey;
-  _states.cookie = adaptCookieFormat(await chromeStorage.cookies());
+  _states.cookie = cookieAdapter.format(await chromeStorage.cookies());
   bindCookieKeyToInput();
 };
 
