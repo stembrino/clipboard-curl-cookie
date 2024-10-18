@@ -1,4 +1,4 @@
-.hidden {
+.hidden.hidden {
     display: none;
 }
 
@@ -20,7 +20,10 @@
 .info-btn {
     font-size: 16px;
     color: #b42929;
-    margin-right: auto;
+}
+
+.info-btn:hover {
+    color: red;
 }
 
 .btn-animation-icon {
@@ -70,5 +73,14 @@ button.space-btn:hover {
 button.space-btn:active {
     box-shadow: none;
     transform: translate(0px, 0px);
+}
+
+input.windows-input:focus {
+    outline: 2px #1f1e1e;
+    outline-style: groove;
+}
+input.windows-input {
+    border: 3px solid #e0e0e0;
+    border-style: ridge;
 }
   

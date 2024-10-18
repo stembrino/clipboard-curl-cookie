@@ -4,6 +4,7 @@
   <title>Get Session Cookie</title>
   <link rel="stylesheet" type="text/css" href="./styles/popup.css">
   <link rel="stylesheet" type="text/css" href="./styles/misc.css">
+  <link rel="stylesheet" type="text/css" href="./styles/configPanel.css">
 </head>
 <body>
   <textarea id="cookie-textarea" rows="10" cols="50"></textarea>
@@ -13,10 +14,13 @@
     </section>
     <div class="separator"></div>
     <section class="option-panel__input-menu">
-      <button id="info-btn" class="info-btn btn-animation-icon" type="button" title="redirect to info page">&#9432;</button>
-      <label title="insert a key to be copied in key-value format">key:</label>
-      <input id="cookie-key" class="retro-input" value="">
-      <div class="wrapper-key-list-panel">
+      <button id="info-btn" class="info-btn icon-btn" type="button" title="redirect to info page">&#9432;</button>
+      <button id="config-btn" class="config-btn icon-btn btn-animation-icon" type="button" title="open config panel"></button>
+      <div class="right-side-panel">
+        <span>
+          <label title="insert a key to be copied in key-value format">key:</label>
+          <input id="cookie-key" class="windows-input" value="">
+        </span>
         <button id="btn-open-key-list" type="button" class="icon-btn open-list btn-animation-icon" title="open keys panel"></button>
         <button id="cookie-key-add" class="icon-btn menu-button btn-animation-icon" type="button" aria-label="save key" title="save the key to the list"></button>
       </div>
@@ -24,6 +28,18 @@
   </div>
   <div id="wrapper-key-list" class="wrapper-cooke-key-list-panel hidden">
     <div id="cookie-key-list" class="cooke-key-list-panel"></div>
+  </div>
+  <div id="wrapper-config" class="wrapper-config-panel hidden">
+    <div id="config-panel" class="config-panel">
+      <div>
+        <label title="insert a prefix to be copied appended in cookie">prefix:</label>
+        <input id="prefix-value" name="prefix" class="windows-input" value="">
+      </div>
+      <div>
+        <label title="insert a suffix to be copied appended in cookie">suffix:</label>
+        <input id="suffix-value" name="suffix" class="windows-input" value="">
+      </div>
+    </div>
   </div>
 </body>
 <script type="module" src="./src/main.js"></script>

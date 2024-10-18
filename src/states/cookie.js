@@ -2,30 +2,30 @@ import { chromeStorage, keys } from "../util/chromeStorage.js";
 import { selector } from "../domManipulation/domSelector.js";
 import { cookieAdapter } from "../adapter/cookieFormatAdapter.js";
 
-const _states = {
+const _state = {
   cookieKey: "",
   cookie: "",
 };
 
-const getCookieKey = () => _states.cookieKey;
+const getCookieKey = () => _state.cookieKey;
 
-const getCookies = () => _states.cookie;
+const getCookies = () => _state.cookie;
 
 const updateCookieKey = (value) => {
   chromeStorage.set({ key: keys.COOKIE_KEY, value });
-  _states.cookieKey = value;
+  _state.cookieKey = value;
   bindCookieKeyToInput();
 };
 
 const bindCookieKeyToInput = () => {
-  if (_states.cookieKey === undefined) return;
+  if (_state.cookieKey === undefined) return;
 
-  selector.cookieKeyEl.value = _states.cookieKey;
+  selector.cookieKeyEl.value = _state.cookieKey;
 };
 
 const loadStates = async () => {
-  _states.cookieKey = (await chromeStorage.get(keys.COOKIE_KEY))?.cookieKey;
-  _states.cookie = cookieAdapter.format(await chromeStorage.cookies());
+  _state.cookieKey = (await chromeStorage.get(keys.COOKIE_KEY))?.cookieKey;
+  _state.cookie = cookieAdapter.format(await chromeStorage.cookies());
   bindCookieKeyToInput();
 };
 

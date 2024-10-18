@@ -14,4 +14,9 @@ export const selector = {
   btnOpenKeyListEl: document.getElementById("btn-open-key-list"),
   allCookieKeysItem: document.querySelectorAll("cookie-key-item"),
   infoBtn: document.getElementById("info-btn"),
+  prefixValue: document.getElementById("prefix-value"),
+  suffixValue: document.getElementById("suffix-value"),
+  wrapperConfig: document.getElementById("wrapper-config"),
+  configPanel: document.getElementById("config-panel"),
+  configBtn: document.getElementById("config-btn"),
 };

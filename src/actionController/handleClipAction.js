@@ -16,17 +16,11 @@ const copyToClipboard = async (text) => {
 };
 
 const showInTextarea = (text) => {
-  if (text.length === 0) {
+  if (!cookieState.getCookies()) {
     selector.cookieTextareaEl.value = "Empty cookies :(";
     return;
   }
   selector.cookieTextareaEl.value = text;
-};
-
-const formatCookie = () => {
-  if (cookieState.getCookieKey())
-    return cookieAdapter.formatKeyValue(cookieState.getCookies());
-  return cookieState.getCookies();
 };
 
 const clipFeedbackBtn = () => {
@@ -42,8 +36,7 @@ const clipFeedbackBtn = () => {
 };
 
 const handleClipClick = async () => {
-  const cookies = cookieState.getCookies();
-  const formattedCookies = formatCookie(cookies);
+  const formattedCookies = cookieAdapter.formatCopyClipboard();
 
   showInTextarea(formattedCookies);
   const hasSuccessCopied = copyToClipboard(formattedCookies);

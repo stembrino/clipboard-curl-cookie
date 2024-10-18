@@ -1,6 +1,8 @@
 /**
  * @file This file initializes and starts event listeners for the application.
  */
+import { handleBlurPrefixAction } from "../actionController/handleBlurPerfixAction.js";
+import { handleBlurSuffixAction } from "../actionController/handleBlurSuffixAction.js";
 import { handleClipClick } from "../actionController/handleClipAction.js";
 import { handleCookieKeyAdd } from "../actionController/handleCookieKeyAddAction.js";
 import { handleKeyBlurAction } from "../actionController/handleKeyBlurAction.js";
@@ -50,6 +52,29 @@ const infoBtnListener = () => {
   });
 };
 
+const clickWrapperConfigListener = () => {
+  selector.wrapperConfig.addEventListener("click", () => {
+    selector.wrapperConfig.classList.add("hidden");
+  });
+};
+
+const clickConfigPanelListener = () => {
+  selector.configPanel.addEventListener("click", (event) => {
+    event.stopPropagation();
+  });
+};
+
+const clickConfigBtnListener = () => {
+  selector.configBtn.addEventListener("click", () => {
+    selector.wrapperConfig.classList.remove("hidden");
+  });
+};
+
+const blurPrefixSuffixValueListener = () => {
+  selector.prefixValue.addEventListener("blur", handleBlurPrefixAction);
+  selector.suffixValue.addEventListener("blur", handleBlurSuffixAction);
+};
+
 export const initListeners = () => {
   clipBtnListener();
   inputKeyBlurListener();
@@ -59,4 +84,8 @@ export const initListeners = () => {
   clickWrapperKeyListListener();
   clickKeyListListener();
   infoBtnListener();
+  clickConfigPanelListener();
+  clickWrapperConfigListener();
+  clickConfigBtnListener();
+  blurPrefixSuffixValueListener();
 };

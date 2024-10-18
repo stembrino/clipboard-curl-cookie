@@ -5,27 +5,33 @@ const _state = {
   keySuffix: "",
 };
 
-const getSuffix = () => {
-  return _state.keySuffix;
-};
-
 const getPrefix = () => {
   return _state.keyPrefix;
 };
 
-const updateSuffix = (suffix) => {
-  _state.keySuffix = suffix;
-  chromeStorage.set({ key: keys.SUFFIX_KEY, value: suffix });
+const getSuffix = () => {
+  return _state.keySuffix;
 };
 
-const updatePrefix = (prefix) => {
+const updatePrefix = async (prefix) => {
   _state.keyPrefix = prefix;
-  chromeStorage.set({ key: keys.PREFIX_KEY, value: prefix });
+  await chromeStorage.set({ key: keys.PREFIX_KEY, value: prefix });
+};
+
+const updateSuffix = async (suffix) => {
+  _state.keySuffix = suffix;
+  await chromeStorage.set({ key: keys.SUFFIX_KEY, value: suffix });
+};
+
+const loadStates = async () => {
+  _state.keyPrefix = (await chromeStorage.get(keys.PREFIX_KEY))?.keyPrefix;
+  _state.keySuffix = (await chromeStorage.get(keys.SUFFIX_KEY))?.keySuffix;
 };
 
 export const configState = {
-  getSuffix,
   getPrefix,
-  updateSuffix,
+  getSuffix,
   updatePrefix,
+  updateSuffix,
+  loadStates,
 };

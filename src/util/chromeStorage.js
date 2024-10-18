@@ -5,8 +5,8 @@
 export const keys = {
   COOKIE_KEY: "cookieKey",
   COOKIE_KEY_LIST: "cookieKeyList",
-  SUFFIX_KEY: "suffixKey",
-  PREFIX_KEY: "prefixKey",
+  SUFFIX_KEY: "keySuffix",
+  PREFIX_KEY: "keyPrefix",
 };
 
 /**

@@ -115,13 +115,16 @@ button.cookie-key-list-panel__item:active {
     color: #601616;
 }
 
-.wrapper-key-list-panel {
-    display: flex;
-    gap: 16px;
-}
-
 .clipboard-section {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.right-side-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
 }
