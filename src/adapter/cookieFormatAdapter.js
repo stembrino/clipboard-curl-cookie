@@ -4,7 +4,7 @@ import { cookieState } from "../states/cookie.js";
 const cookieKeyValue = (cookie) => {
   if (!cookieState.getCookieKey()) return cookie;
 
-  return `"${cookieState.getCookieKey()}": ${cookie}`;
+  return `"${cookieState.getCookieKey()}": "${cookie}"`;
 };
 
 const format = (cookie) => {
