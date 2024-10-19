@@ -13,5 +13,5 @@ export const handleSyncHostBtn = async () => {
   syncHostBtnTimeout = setTimeout(() => {
     syncHostBtnTimeout = null;
     selector.syncHostBtn.textContent = syncHostBtnInitText;
-  }, 1200);
+  }, 2000);
 };
