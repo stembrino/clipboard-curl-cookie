@@ -24,9 +24,7 @@ const showInTextarea = (text) => {
 };
 
 const clipFeedbackBtn = () => {
-  if (clipFeedbackBtnTimeout) {
-    clearTimeout(clipFeedbackBtnTimeout);
-  }
+  if (clipFeedbackBtnTimeout) return;
 
   selector.clipBtnEl.textContent = "COPIED";
   clipFeedbackBtnTimeout = setTimeout(() => {

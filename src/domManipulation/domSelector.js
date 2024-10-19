@@ -19,4 +19,6 @@ export const selector = {
   wrapperConfig: document.getElementById("wrapper-config"),
   configPanel: document.getElementById("config-panel"),
   configBtn: document.getElementById("config-btn"),
+  syncHostBtn: document.getElementById("sync-host-btn"),
+  syncHostInput: document.getElementById("sync-host-input"),
 };

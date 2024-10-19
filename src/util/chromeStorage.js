@@ -7,6 +7,7 @@ export const keys = {
   COOKIE_KEY_LIST: "cookieKeyList",
   SUFFIX_KEY: "keySuffix",
   PREFIX_KEY: "keyPrefix",
+  SYNC_HOST: "syncHost",
 };
 
 /**

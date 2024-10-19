@@ -7,6 +7,8 @@ import { handleClipClick } from "../actionController/handleClipAction.js";
 import { handleCookieKeyAdd } from "../actionController/handleCookieKeyAddAction.js";
 import { handleKeyBlurAction } from "../actionController/handleKeyBlurAction.js";
 import { handleKeydown } from "../actionController/handleKeydownAction.js";
+import { handleSyncHostBtn } from "../actionController/handleSyncHostBtnAction.js";
+import { handleSyncHostInputListener } from "../actionController/handleSyncHostInputAction.js";
 import { chromeStorage } from "../util/chromeStorage.js";
 import { selector } from "./domSelector.js";
 
@@ -75,6 +77,14 @@ const blurPrefixSuffixValueListener = () => {
   selector.suffixValue.addEventListener("blur", handleBlurSuffixAction);
 };
 
+const clickSyncHostListener = () => {
+  selector.syncHostBtn.addEventListener("click", handleSyncHostBtn);
+};
+
+const blurSyncHostInputListener = () => {
+  selector.syncHostInput.addEventListener("blur", handleSyncHostInputListener);
+};
+
 export const initListeners = () => {
   clipBtnListener();
   inputKeyBlurListener();
@@ -88,4 +98,6 @@ export const initListeners = () => {
   clickWrapperConfigListener();
   clickConfigBtnListener();
   blurPrefixSuffixValueListener();
+  clickSyncHostListener();
+  blurSyncHostInputListener();
 };

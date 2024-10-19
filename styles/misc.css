@@ -1,86 +1,94 @@
 .hidden.hidden {
-    display: none;
+  display: none;
 }
 
 .separator {
-    height: 2px;
-    width: 100%;
-    background: #d1d1d1;
-    box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.3);
-    border-radius: 1px;
-    margin-block: 1px;
+  height: 2px;
+  width: 100%;
+  background: #d1d1d1;
+  box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 1px;
+  margin-block: 1px;
 }
 
 .icon-btn {
-    background-size: contain;
-    background-repeat: no-repeat;
-    padding: 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 1rem;
 }
 
 .info-btn {
-    font-size: 16px;
-    color: #b42929;
+  font-size: 1.6rem;
+  color: #b42929;
 }
 
 .info-btn:hover {
-    color: red;
+  color: red;
 }
 
 .btn-animation-icon {
-    transition: transform 0.1s;
+  transition: transform 0.1s;
 }
 
 .btn-animation-icon:hover {
-    box-shadow: 1px 1px 0px #999999;
+  box-shadow: 1px 1px 0px #999999;
 }
 
 .btn-animation-icon:active {
-    box-shadow: none;
-    transform: translate(0px, 0px);
+  box-shadow: none;
+  transform: translate(0px, 0px);
+}
+
+button.clipboard-btn {
+  background-image: url(../images/copy-regular.svg);
+}
+
+button.sync-host-btn {
+  background-image: url(../images/circle-nodes-solid.svg);
 }
 
 button.menu-button {
-    background-image: url(../images/floppy-disk-solid.svg);
+  background-image: url(../images/floppy-disk-solid.svg);
 }
 
 button.open-list {
-    background-image: url(../images/list-solid.svg);
+  background-image: url(../images/list-solid.svg);
 }
 
 button.space-btn {
-    text-align: center;
-    width: 240px;
-    border: 5px solid #e0e0e0;
-    border-style: ridge;
-    background-color: inherit;
-    border-radius: 2px;
-    padding: 3px 36px;
-    margin: auto;
-    font-size: 14px;
-    color: #333333;
-    transition: transform 0.1s;
-    background-image: url(../images/copy-regular.svg);
-    background-repeat: no-repeat;
-    background-size: 17px;
-    background-position-y: center;
-    background-position-x: 8px;
+  min-width: 170px; /* temporary to not squeeze the button when label change, with toast feedback can remove it */
+  flex-grow: 1;
+  white-space: nowrap;
+  text-align: center;
+  border: 5px solid #e0e0e0;
+  border-style: ridge;
+  background-color: inherit;
+  border-radius: 2px;
+  padding-block: 0.3rem;
+  padding-inline: 3.5rem;
+  font-size: 1.3rem;
+  color: #333333;
+  transition: transform 0.1s;
+  background-repeat: no-repeat;
+  background-size: 17px;
+  background-position-y: center;
+  background-position-x: 8px;
 }
 
 button.space-btn:hover {
-    box-shadow: 1px 1px 0px #999999;
+  box-shadow: 1px 1px 0px #999999;
 }
-  
+
 button.space-btn:active {
-    box-shadow: none;
-    transform: translate(0px, 0px);
+  box-shadow: none;
+  transform: translate(0px, 0px);
 }
 
 input.windows-input:focus {
-    outline: 2px #1f1e1e;
-    outline-style: groove;
+  outline: 2px #1f1e1e;
+  outline-style: groove;
 }
 input.windows-input {
-    border: 3px solid #e0e0e0;
-    border-style: ridge;
+  border: 3px solid #e0e0e0;
+  border-style: ridge;
 }
-  

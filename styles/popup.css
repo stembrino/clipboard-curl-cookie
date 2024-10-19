@@ -1,130 +1,136 @@
 html {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-    position: relative;
-    color: white;
-    background-color: #e0e0e0;
-    margin: 0;
-    padding: 10px;
-    border: 10px solid #601616;
-    border-style: ridge;
+  font-size: inherit;
+  position: relative;
+  color: white;
+  background-color: #e0e0e0;
+  margin: 0;
+  padding: 1rem;
+  border: 10px solid #601616;
+  border-style: ridge;
 }
 
 button {
-    border: none;
-    background-color: inherit;
-    color: #FFF;
-    font-size: 14px;
-    font-weight: bolder;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+  border: none;
+  background-color: inherit;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: bolder;
+  font-weight: bold;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
 }
 
 .option-panel {
-    display: flex;
-    gap: 4px;
-    flex-direction: column;
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
 }
 
 input.retro-input {
-    text-align: center;
-    font-size: 14px;
-    color: #333;
-    padding-inline: 2px;
-    padding-block: 0px;
-    width: 96px;
-    outline: none;
-    transition: all 0.3s ease;
-    border: none;
-    border-bottom: 2px solid #601616;
-    border-bottom-style: ridge;
-    background-color: inherit;
-    margin-inline-end: 12px;
+  text-align: center;
+  font-size: 1.4rem;
+  color: #333;
+  padding-inline: 2px;
+  padding-block: 0px;
+  width: 96px;
+  outline: none;
+  transition: all 0.3s ease;
+  border: none;
+  border-bottom: 2px solid #601616;
+  border-bottom-style: ridge;
+  background-color: inherit;
+  margin-inline-end: 1.2rem;
 }
 
 input.retro-input:focus {
-    border-bottom-color: #ff4400;
+  border-bottom-color: #ff4400;
 }
 
 .option-panel__input-menu {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .option-panel__input-menu label {
-    color: #ff4400;
-    font-family: 'Source Code Pro', 'Courier New', Courier, monospace;
-    word-spacing: -4px;
-    font-weight: bolder;
+  color: #ff4400;
+  font-family: "Source Code Pro", "Courier New", Courier, monospace;
+  word-spacing: -4px;
+  font-weight: bolder;
 }
 
 .wrapper-cooke-key-list-panel {
-    position: fixed;
-    inset: 0;
+  position: fixed;
+  inset: 0;
 }
 
 .cooke-key-list-panel {
-    display: grid;
-    grid-template-columns: auto auto;
-    row-gap: 8px;
-    width: 40%;
-    max-height: 128px;
-    outline: 1px solid black;
-    background-color: #e0e0e0;
-    border: 6px solid #e0e0e0;
-    border-style: ridge;
-    padding-block: 12px;
-    padding-inline-start: 12px;
-    overflow: auto;
-    margin-inline: auto 24px;
-    margin-block-start: 24px;
+  display: grid;
+  grid-template-columns: auto auto;
+  row-gap: 8px;
+  width: 40%;
+  max-height: 128px;
+  outline: 1px solid black;
+  background-color: #e0e0e0;
+  border: 6px solid #e0e0e0;
+  border-style: ridge;
+  padding-block: 12px;
+  padding-inline-start: 1.2rem;
+  overflow: auto;
+  margin-inline: auto 2.4rem;
+  margin-block-start: 2.4rem;
 }
 
 button.cooke-key-list-panel__item {
-    position: relative;
-    display: inline-block;
-    background-color: inherit;
-    border: 4px solid #e0e0e0;
-    border-style: ridge;
-    border-radius: 1px;
-    color: black;
-    font-size: 14px;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bolder;
-    text-align: center;
-    box-shadow: 1px 1px 0px #000;
-    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  display: inline-block;
+  background-color: inherit;
+  border: 4px solid #e0e0e0;
+  border-style: ridge;
+  border-radius: 1px;
+  color: black;
+  font-size: 1.4rem;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bolder;
+  text-align: center;
+  box-shadow: 1px 1px 0px #000;
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 button.cookie-key-list-panel__item:hover {
-    background-color: #d4d4d4;
-    /* box-shadow: 2px 2px 0px #000; */
+  background-color: #d4d4d4;
+  /* box-shadow: 2px 2px 0px #000; */
 }
 
 button.cookie-key-list-panel__item:active {
-    background-color: #c0c0c0;
-    box-shadow: 0px 0px 0px #000;
+  background-color: #c0c0c0;
+  box-shadow: 0px 0px 0px #000;
 }
 
 .cookie-delete-key-item {
-    color: #601616;
+  color: #601616;
 }
 
-.clipboard-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+section.clipboard-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding-inline: 4rem;
 }
 
 .right-side-panel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }

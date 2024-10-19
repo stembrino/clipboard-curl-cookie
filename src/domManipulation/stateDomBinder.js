@@ -13,11 +13,20 @@ const configSuffixDomBinder = () => {
   selector.suffixValue.value = configState.getSuffix();
 };
 
+const configSyncHostDomBinder = () => {
+  if (!configState.getSyncHost()) return;
+  selector.syncHostInput.value = configState.getSyncHost();
+};
+
 const startStateDomBinder = () => {
   configPrefixDomBinder();
   configSuffixDomBinder();
+  configSyncHostDomBinder();
 };
 
 export const stateDomBinder = {
   init: startStateDomBinder,
+  change: {
+    configSyncHostDomBinder,
+  },
 };
