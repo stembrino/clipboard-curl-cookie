@@ -7,7 +7,7 @@ const sendCookieToHost = async () => {
 
   const key = cookieState.getCookieKey() || "cookie";
   try {
-    await fetch(configState.getSyncHost(), {
+    const response = await fetch(configState.getSyncHost(), {
       headers: {
         "Content-Type": "application/json", // Set the content type
       },
@@ -17,8 +17,9 @@ const sendCookieToHost = async () => {
         cookie: cookieState.getCookies(),
       }),
     });
+    const isSuccessStatus = response.status >= 200 && response.status <= 299;
 
-    return "SUCCESS";
+    return isSuccessStatus ? "SUCCESS" : "BAD REQUEST";
   } catch (error) {
     console.error(error);
 
