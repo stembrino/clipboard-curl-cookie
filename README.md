@@ -24,9 +24,6 @@
 2. Run the project using `docker-compose up` (or run it locally if you prefer).
 3. In Insomnia, set up a request to get the cookie from `http://localhost:3003/api/cookie`.
 
-> **🤝 This is useful for quickly adding cookies in the header using Insomnia or Postman. 🤌**
-
-
 ## How It Works
 
 1. Install the Cookie Clipboard extension from the Chrome Web Store.
