@@ -14,11 +14,17 @@
 ## Features
 
 ### Copy to Clipboard
+> #### Demo 🎬
+> https://youtu.be/g6WB-_XJsNA
+
 - **One-Click Copy**: Easily copy cookies without navigating through complex settings.
 - **User-Friendly Interface**: A clean and intuitive design for effortless usage.
 - **Cross-Site Compatibility**: Works seamlessly on any website.
 
+
 ### Integration with API Tools (e.g., Insomnia)
+> #### Demo 🎬
+> https://youtu.be/Q7AR09-UaNc
 1. Clone this project: https://github.com/stembrino/cookie-api-hook
    - This project uses Fastify as the backend to store cookies and make them available for requests (only on localhost).
 2. Run the project using `docker-compose up` (or run it locally if you prefer).
