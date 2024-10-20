@@ -24,6 +24,13 @@
 2. Run the project using `docker-compose up` (or run it locally if you prefer).
 3. In Insomnia, set up a request to get the cookie from `http://localhost:3003/api/cookie`.
 
+**Insomnia script**c to set the cookie in the Base Environment (using the key as the key and cookie as value)
+> Set it in After-response (Request (GET http://localhost:3003/api/cookie) -> Sripts- > After-response)
+```js
+const responseBody = insomnia.response.json();
+insomnia.environment.set(responseBody.key, responseBody.cookie);
+```
+
 ## How It Works
 
 1. Install the Cookie Clipboard extension from the Chrome Web Store.
