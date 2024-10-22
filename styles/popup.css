@@ -73,7 +73,7 @@ input.retro-input:focus {
 
 .cooke-key-list-panel {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto 32px;
   row-gap: 8px;
   width: 56%;
   max-height: 128px;

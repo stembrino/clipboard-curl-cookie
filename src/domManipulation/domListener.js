@@ -30,7 +30,8 @@ const btnCookieKeyAddListener = () => {
 
 const btnOpenKeyListAddListener = () => {
   selector.btnOpenKeyListEl.addEventListener("click", () => {
-    selector.wrapperKeyList.classList.remove("hidden");
+    selector.wrapperKeyList.classList.toggle("hidden");
+    selector.wrapperKeyList.focus();
   });
 };
 
@@ -68,7 +69,8 @@ const clickConfigPanelListener = () => {
 
 const clickConfigBtnListener = () => {
   selector.configBtn.addEventListener("click", () => {
-    selector.wrapperConfig.classList.remove("hidden");
+    selector.wrapperConfig.classList.toggle("hidden");
+    selector.wrapperConfig.focus();
   });
 };
 
