@@ -52,4 +52,4 @@ Contributions are welcome! If you have suggestions for improvement or want to re
 
 ## 📷
 
-<img width="464" alt="image" src="https://github.com/user-attachments/assets/1ecf0eaf-a2bb-4d3d-937c-042eae935290">
+<img width="463" alt="image" src="https://github.com/user-attachments/assets/18e0adfa-a20b-4749-ae82-eb936b11d74c">
