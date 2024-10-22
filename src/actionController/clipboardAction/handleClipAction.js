@@ -1,6 +1,6 @@
-import { cookieState } from "../states/cookie.js";
-import { selector } from "../domManipulation/domSelector.js";
-import { cookieAdapter } from "../adapter/cookieFormatAdapter.js";
+import { cookieState } from "../../states/cookie.js";
+import { selector } from "../../domManipulation/domSelector.js";
+import { cookieAdapter } from "../../adapter/cookieFormatAdapter.js";
 
 const btnClipInitText = selector.clipBtnEl.textContent;
 let clipFeedbackBtnTimeout = null;

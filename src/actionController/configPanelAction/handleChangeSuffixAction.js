@@ -1,6 +1,6 @@
-import { configState } from "../states/config.js";
+import { configState } from "../../states/config.js";
 
-export const handleBlurSuffixAction = (event) => {
+export const handleChangeSuffixAction = (event) => {
   const { value } = event.target;
   if (value === configState.getSuffix()) return;
 

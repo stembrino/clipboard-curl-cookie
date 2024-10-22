@@ -1,6 +1,6 @@
-import { configState } from "../states/config.js";
+import { configState } from "../../states/config.js";
 
-export const handleBlurPrefixAction = (event) => {
+export const handleChangePrefixAction = (event) => {
   const { value } = event.target;
   if (value === configState.getPrefix()) return;
 

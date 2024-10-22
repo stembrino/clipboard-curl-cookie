@@ -1,7 +1,7 @@
 import {
   handleClickKeyList,
   handleClickKeyListDelete,
-} from "../actionController/handleClickKeyListAction.js";
+} from "../actionController/cookieKeyAction/handleClickKeyListAction.js";
 
 export const creatorEl = {
   cookieKeyLi: () => {

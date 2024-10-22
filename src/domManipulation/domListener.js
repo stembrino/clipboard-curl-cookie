@@ -1,14 +1,14 @@
 /**
  * @file This file initializes and starts event listeners for the application.
  */
-import { handleBlurPrefixAction } from "../actionController/handleBlurPerfixAction.js";
-import { handleBlurSuffixAction } from "../actionController/handleBlurSuffixAction.js";
-import { handleClipClick } from "../actionController/handleClipAction.js";
-import { handleCookieKeyAdd } from "../actionController/handleCookieKeyAddAction.js";
-import { handleKeyBlurAction } from "../actionController/handleKeyBlurAction.js";
-import { handleKeydown } from "../actionController/handleKeydownAction.js";
-import { handleSyncHostBtn } from "../actionController/handleSyncHostBtnAction.js";
-import { handleSyncHostInputListener } from "../actionController/handleSyncHostInputAction.js";
+import { handleChangePrefixAction } from "../actionController/configPanelAction/handleChangePrefixAction.js";
+import { handleChangeSuffixAction } from "../actionController/configPanelAction/handleChangeSuffixAction.js";
+import { handleClipClick } from "../actionController/clipboardAction/handleClipAction.js";
+import { handleCookieKeyAdd } from "../actionController/cookieKeyAction/handleCookieKeyAddAction.js";
+import { handleKeyChangeAction } from "../actionController/cookieKeyAction/handleKeyChangeAction.js";
+import { handleKeydown } from "../actionController/cookieKeyAction/handleKeydownAction.js";
+import { handleSyncHostBtn } from "../actionController/configPanelAction/syncHostKey/handleSyncHostBtnAction.js";
+import { handleSyncHostInputListener } from "../actionController/configPanelAction/syncHostKey/handleSyncHostInputAction.js";
 import { chromeStorage } from "../util/chromeStorage.js";
 import { selector } from "./domSelector.js";
 
@@ -16,8 +16,8 @@ const clipBtnListener = () => {
   selector.clipBtnEl.addEventListener("click", handleClipClick);
 };
 
-const inputKeyBlurListener = () => {
-  selector.inputKeyEl.addEventListener("blur", handleKeyBlurAction);
+const inputKeyChangeListener = () => {
+  selector.inputKeyEl.addEventListener("blur", handleKeyChangeAction);
 };
 
 const inputKeyClickListener = () => {
@@ -74,22 +74,25 @@ const clickConfigBtnListener = () => {
   });
 };
 
-const blurPrefixSuffixValueListener = () => {
-  selector.prefixValue.addEventListener("blur", handleBlurPrefixAction);
-  selector.suffixValue.addEventListener("blur", handleBlurSuffixAction);
+const changePrefixSuffixValueListener = () => {
+  selector.prefixValue.addEventListener("change", handleChangePrefixAction);
+  selector.suffixValue.addEventListener("change", handleChangeSuffixAction);
 };
 
 const clickSyncHostListener = () => {
   selector.syncHostBtn.addEventListener("click", handleSyncHostBtn);
 };
 
-const blurSyncHostInputListener = () => {
-  selector.syncHostInput.addEventListener("blur", handleSyncHostInputListener);
+const changeSyncHostInputListener = () => {
+  selector.syncHostInput.addEventListener(
+    "change",
+    handleSyncHostInputListener,
+  );
 };
 
 export const initListeners = () => {
   clipBtnListener();
-  inputKeyBlurListener();
+  inputKeyChangeListener();
   inputKeyClickListener();
   btnCookieKeyAddListener();
   btnOpenKeyListAddListener();
@@ -99,7 +102,7 @@ export const initListeners = () => {
   clickConfigPanelListener();
   clickWrapperConfigListener();
   clickConfigBtnListener();
-  blurPrefixSuffixValueListener();
+  changePrefixSuffixValueListener();
   clickSyncHostListener();
-  blurSyncHostInputListener();
+  changeSyncHostInputListener();
 };

@@ -1,5 +1,5 @@
-import { selector } from "../domManipulation/domSelector.js";
-import { serviceSyncHostService } from "../service/serviceSyncHostService.js";
+import { selector } from "../../../domManipulation/domSelector.js";
+import { serviceSyncHostService } from "../../../service/serviceSyncHostService.js";
 
 let syncHostBtnTimeout = null;
 const syncHostBtnInitText = selector.syncHostBtn.textContent;

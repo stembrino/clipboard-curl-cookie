@@ -1,6 +1,6 @@
-import { cookieState } from "../states/cookie.js";
+import { cookieState } from "../../states/cookie.js";
 
-export const handleKeyBlurAction = (event) => {
+export const handleKeyChangeAction = (event) => {
   const { value } = event.target;
   if (value === cookieState.getCookieKey()) return;
 

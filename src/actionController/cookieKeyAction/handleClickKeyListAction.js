@@ -1,6 +1,6 @@
-import { cookieState } from "../states/cookie.js";
-import { cookieKeyListState } from "../states/cookieKeyList.js";
-import { selector } from "../domManipulation/domSelector.js";
+import { cookieState } from "../../states/cookie.js";
+import { cookieKeyListState } from "../../states/cookieKeyList.js";
+import { selector } from "../../domManipulation/domSelector.js";
 
 export const handleClickKeyList = (event) => {
   if (!event.target?.textContent) return;

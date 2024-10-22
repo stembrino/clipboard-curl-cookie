@@ -1,5 +1,5 @@
-import { cookieState } from "../states/cookie.js";
-import { handleClipClick } from "./handleClipAction.js";
+import { cookieState } from "../../states/cookie.js";
+import { handleClipClick } from "../clipboardAction/handleClipAction.js";
 
 export const handleKeydown = (event) => {
   if (event.key === "Enter") {

@@ -1,5 +1,5 @@
-import { stateDomBinder } from "../domManipulation/stateDomBinder.js";
-import { configState } from "../states/config.js";
+import { stateDomBinder } from "../../../domManipulation/stateDomBinder.js";
+import { configState } from "../../../states/config.js";
 
 export const handleSyncHostInputListener = (event) => {
   const { value } = event.target;
