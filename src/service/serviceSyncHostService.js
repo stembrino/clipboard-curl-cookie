@@ -9,7 +9,7 @@ const sendCookieToHost = async () => {
   try {
     const response = await fetch(configState.getSyncHost(), {
       headers: {
-        "Content-Type": "application/json", // Set the content type
+        "Content-Type": "application/json",
       },
       method: "POST",
       body: JSON.stringify({
