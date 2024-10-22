@@ -6,6 +6,7 @@ export const handleClickKeyList = (event) => {
   if (!event.target?.textContent) return;
   cookieState.updateCookieKey(event.target.textContent);
   selector.wrapperKeyList.classList.add("hidden");
+  selector.clipBtnEl.focus();
 };
 
 export const handleClickKeyListDelete = (event) => {
