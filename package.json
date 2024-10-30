@@ -3,6 +3,14 @@
   "version": "1.0.0",
   "description": "**Cookie Clipboard** is a lightweight Chrome extension that streamlines the process of copying cookies from any website to your clipboard with just a single click. Ideal for developers, testers, and anyone who frequently works with cookies, this extension is designed for simplicity and efficiency.",
   "main": "main.js",
+  "keywords": [
+    "chrome-extension",
+    "cookies",
+    "clipboard",
+    "developer-tools",
+    "postman",
+    "insomnia"
+  ],
   "scripts": {
     "format": "prettier --write .",
     "lint": "eslint . --fix"
