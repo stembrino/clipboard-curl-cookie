@@ -8,6 +8,7 @@ export const keys = {
   SUFFIX_KEY: "keySuffix",
   PREFIX_KEY: "keyPrefix",
   SYNC_HOST: "syncHost",
+  AUTO_COOKIE_KEY: "autoCookieKey",
 };
 
 /**
@@ -25,14 +26,18 @@ const setChromeStorage = async ({ key, value }) => {
 };
 
 const getCurrentTab = async () => {
-  return new Promise((resolve, reject) => {
-    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-      if (chrome.runtime.lastError) {
-        return reject(chrome.runtime.lastError);
-      }
-      resolve(tabs[0]);
-    });
+  const tabData = await chrome.tabs.query({
+    active: true,
+    currentWindow: true,
   });
+  return tabData[0];
+};
+
+const getCurrentHostNameTab = async () => {
+  const { url } = await getCurrentTab();
+  const urlFormat = new URL(url);
+  const hostname = urlFormat.hostname.replace(/^www\./, "").split(".")[0];
+  return hostname;
 };
 
 const getAllCookies = async () => {
@@ -69,6 +74,7 @@ const copyToClipboard = async (text) => {
 export const chromeStorage = {
   get: getChromeStorage,
   set: setChromeStorage,
+  tabHost: getCurrentHostNameTab,
   cookies: getAllCookies,
   createTab,
   copyToClipboard,

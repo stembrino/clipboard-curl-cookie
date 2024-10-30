@@ -11,7 +11,7 @@
   grid-template-columns: auto;
   row-gap: 4px;
   width: 48%;
-  max-height: 128px;
+  max-height: 160px;
   outline: 1px solid black;
   background-color: #e0e0e0;
   border: 6px solid #e0e0e0;
@@ -41,4 +41,9 @@ button.config-btn {
   display: flex;
   flex-direction: column;
   gap: 3px;
+}
+
+.checkbox-auto-key {
+  display: flex;
+  align-items: center;
 }

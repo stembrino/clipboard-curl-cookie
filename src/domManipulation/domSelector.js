@@ -21,4 +21,5 @@ export const selector = {
   configBtn: document.getElementById("config-btn"),
   syncHostBtn: document.getElementById("sync-host-btn"),
   syncHostInput: document.getElementById("sync-host-input"),
+  checkboxAutoKey: document.getElementById("checkbox-auto-key"),
 };

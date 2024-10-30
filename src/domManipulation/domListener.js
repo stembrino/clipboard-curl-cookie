@@ -11,6 +11,7 @@ import { handleSyncHostBtn } from "../actionController/configPanelAction/syncHos
 import { handleSyncHostInputListener } from "../actionController/configPanelAction/syncHostKey/handleSyncHostInputAction.js";
 import { chromeStorage } from "../util/chromeStorage.js";
 import { selector } from "./domSelector.js";
+import { handleCheckboxAutoKeyAction } from "../actionController/configPanelAction/handleCheckboxAutoKeyAction.js";
 
 const clipBtnListener = () => {
   selector.clipBtnEl.addEventListener("click", handleClipClick);
@@ -90,6 +91,13 @@ const changeSyncHostInputListener = () => {
   );
 };
 
+const changeCheckboxAutoKey = () => {
+  selector.checkboxAutoKey.addEventListener(
+    "change",
+    handleCheckboxAutoKeyAction,
+  );
+};
+
 export const initListeners = () => {
   clipBtnListener();
   inputKeyChangeListener();
@@ -105,4 +113,5 @@ export const initListeners = () => {
   changePrefixSuffixValueListener();
   clickSyncHostListener();
   changeSyncHostInputListener();
+  changeCheckboxAutoKey();
 };

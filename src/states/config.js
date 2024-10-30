@@ -6,6 +6,7 @@ const _state = {
   keyPrefix: "",
   keySuffix: "",
   syncHost: "",
+  autoCookieKey: false,
 };
 
 const getPrefix = () => {
@@ -18,6 +19,10 @@ const getSuffix = () => {
 
 const getSyncHost = () => {
   return _state.syncHost;
+};
+
+const getAutoCookieKey = () => {
+  return _state.autoCookieKey;
 };
 
 const updatePrefix = async (prefix) => {
@@ -35,6 +40,11 @@ const updateSyncHost = async (syncHost) => {
   await chromeStorage.set({ key: keys.SYNC_HOST, value: syncHost });
 };
 
+const updateAutoCookieKey = async (autoCookieKey) => {
+  _state.autoCookieKey = autoCookieKey;
+  await chromeStorage.set({ key: keys.AUTO_COOKIE_KEY, value: autoCookieKey });
+};
+
 const loadSyncHostInitState = async () => {
   const syncHostMemory = (await chromeStorage.get(keys.SYNC_HOST))?.syncHost;
   return syncHostMemory ? syncHostMemory : SYNC_HOST_DEFAULT;
@@ -43,6 +53,9 @@ const loadSyncHostInitState = async () => {
 const loadStates = async () => {
   _state.keyPrefix = (await chromeStorage.get(keys.PREFIX_KEY))?.keyPrefix;
   _state.keySuffix = (await chromeStorage.get(keys.SUFFIX_KEY))?.keySuffix;
+  _state.autoCookieKey = Boolean(
+    (await chromeStorage.get(keys.AUTO_COOKIE_KEY))?.autoCookieKey,
+  );
   _state.syncHost = await loadSyncHostInitState();
 };
 
@@ -50,8 +63,10 @@ export const configState = {
   getPrefix,
   getSuffix,
   getSyncHost,
+  getAutoCookieKey,
   updatePrefix,
   updateSuffix,
   updateSyncHost,
+  updateAutoCookieKey,
   loadStates,
 };
