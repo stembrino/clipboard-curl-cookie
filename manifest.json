@@ -3,7 +3,7 @@
   "name": "Clipboard Curl Cookie",
   "description": "Copy cookies to clipboard to use with some API tools",
   "version": "1.3",
-  "permissions": ["cookies", "activeTab", "storage", "notifications"],
+  "permissions": ["cookies", "activeTab", "storage"],
   "host_permissions": ["*://*/*"],
   "background": {
     "service_worker": "background.js"
