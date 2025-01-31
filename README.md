@@ -1,4 +1,5 @@
 # Cookie Clipboard 🍪
+**Add to chrome:** https://chromewebstore.google.com/detail/clipboard-curl-cookie/iphipajemoennfopgpiicajjfoigioff?hl=en-US&utm_source=ext_sidebar
 
 **Cookie Clipboard** is a lightweight Chrome extension that simplifies copying cookies from any website to your clipboard with a single click. Perfect for developers and testers, it features **API Syncing** to automatically send copied cookies to a specified host API, enhancing workflow efficiency.
 
